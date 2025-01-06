@@ -9,7 +9,7 @@ services:
         limits:
           memory: 64M
     environment:
-      - TZ=Europe/Moscow
+      TZ: $TZ 
     image: ksey/torrserver:latest
     labels:
       icon: https://freesoft.ru/storage/images/746/7460/745969/745969_normal.png
