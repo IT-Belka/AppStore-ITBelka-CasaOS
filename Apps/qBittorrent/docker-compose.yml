@@ -112,6 +112,26 @@ x-casaos:
   thumbnail: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/thumbnail.png
   tips:
     before_install:
+      ru_ru: |
+        Default Account
+        
+        | Username | Password |
+        |----------|----------|
+        | `admin`    | Get from log |
+
+        Пароли должны быть просмотрены в журнале
+
+        Путь доступа по умолчанию в qBittorrent
+        
+        | Name | Value |
+        | ---- | ----- |
+        | DATA Path | `/DATA` |
+        | Downloads Path | `/DATA/Downloads` |
+        | Media Path | `/DATA/Media` |
+
+        Пути к другим подкаталогам данных в CasaOS также аналогичны.
+        Пожалуйста, убедитесь, что вы используете правильный путь при использовании qBittorrent.
+      zh_cn: |
       en_us: |
         Default Account
         
