@@ -1,0 +1,56 @@
+name: charming_nico
+services:
+  main_app:
+    cpu_shares: 90
+    command: []
+    container_name: torrservematrix
+    deploy:
+      resources:
+        limits:
+          memory: 15966M
+    environment:
+      - TZ=Europe/Moscow
+    image: ksey/torrserver:latest
+    labels:
+      icon: https://freesoft.ru/storage/images/746/7460/745969/745969_normal.png
+    ports:
+      - target: 8090
+        published: "22005"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DockerHub/TorrServe-MatriX/TS/db
+        target: /TS/db
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+    hostname: torrservematrix
+x-casaos:
+ architectures:
+    - amd64
+    - arm64
+  main: jellyfin
+  author: CasaOS Team
+  category: Media
+  description:
+    en_us: |
+      Imagine having all your movies, TV shows, and music at your fingertips, ready on any device. Jellyfin transforms your media collection into a personalized entertainment hub, surpassing traditional photo albums. Your media is accessible anywhere and beautifully organized.
+
+      Jellyfin is free and open-source, offering high-quality streaming, detailed metadata, and personalized recommendations. Multiple users can have their own media libraries.
+
+      Deploying Jellyfin on private cloud devices like Zima provides virtually unlimited storage, seamless streaming, and secure, multi-device access. It's perfect for NAS enthusiasts looking to enhance their home media setup.
+    ru_ru: Jellyfin позволяет собирать, управлять и транслировать свою медиаинформацию. Запустите сервер Jellyfin на своей системе и получите доступ к лидирующей системе развлечений с открытым исходным кодом, включая звонки и украшения.
+  developer: TorrServe MatriX
+  author: self
+  category: self
+  hostname: ""
+  icon: https://freesoft.ru/storage/images/746/7460/745969/745969_normal.png
+  index: /
+  is_uncontrolled: false
+  port_map: "22005"
+  scheme: http
+  store_app_id: charming_nico
+  title:
+    custom: TorrServe MatriX
