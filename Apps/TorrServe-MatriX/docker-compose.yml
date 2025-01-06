@@ -3,7 +3,7 @@ services:
   main_app:
     cpu_shares: 90
     command: []
-    container_name: torrservematrix
+    container_name: torrserve
     deploy:
       resources:
         limits:
@@ -15,18 +15,18 @@ services:
       icon: https://freesoft.ru/storage/images/746/7460/745969/745969_normal.png
     ports:
       - target: 8090
-        published: "22005"
+        published: "22006"
         protocol: tcp
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DockerHub/TorrServe-MatriX/TS/db
+        source: /DockerHub/TorrServe-MatriX_2/TS/db
         target: /TS/db
     devices: []
     cap_add: []
     network_mode: bridge
     privileged: false
-    hostname: torrservematrix
+    hostname: torrserve
 x-casaos:
   author: self
   category: self
@@ -34,7 +34,7 @@ x-casaos:
   icon: https://freesoft.ru/storage/images/746/7460/745969/745969_normal.png
   index: /
   is_uncontrolled: false
-  port_map: "22005"
+  port_map: "22006"
   scheme: http
   store_app_id: charming_nico
   title:
