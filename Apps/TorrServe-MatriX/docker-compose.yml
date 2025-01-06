@@ -7,7 +7,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 15966M
+          memory: 64M
     environment:
       - TZ=Europe/Moscow
     image: ksey/torrserver:latest
